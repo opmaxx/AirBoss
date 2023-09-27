@@ -20,25 +20,28 @@ if(isset($email) == true && empty($email) == false)
     }
 }
 
-if($email_verif == TRUE && isset($username) && ($password))
-    {
-        //Envoie des données dans la BDD
-        $stmt = $con->prepare("INSERT INTO user_data (username, email, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $username, $email, $password);
+if ($email_verif == TRUE && isset($username) && isset($password)) {
+    // Envoie des données dans la BDD
+    $stmt = $con->prepare("INSERT INTO user_data (username, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $password);
 
-        if ($stmt->execute()) {
-            //echo "<script> alert('enregistré avec succès') </script>";
-            header("Location: login.html");
-            exit;
-        } else {
-            echo "Error: " . $stmt->error;
-        }
-
-        $stmt->close();
-        $con->close();
+    if ($stmt->execute()) {
+        echo "<script> 
+            var userResponse = confirm('Enregistré avec succès!');
+            if(userResponse){
+                window.location.href = 'login.html';
+            }
+            </script>";
     } else {
-        echo "Données invalides";
+        echo "Error: " . $stmt->error;
     }
+
+    $stmt->close();
+    $con->close();
+} else {
+    echo "Invalid data. Please fill in all fields correctly.";
+}
+
 
 
 ?>
