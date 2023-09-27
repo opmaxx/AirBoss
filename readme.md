@@ -17,12 +17,15 @@
 ## Setup
 - Download [Node.js](https://nodejs.org/en/download/)
 
+- Open terminal in your directory and run :
+
 ``` bash
 # init the project with Node.js
 npm init -y
 
 # Installe dependencies
 npm install webpack webpack-cli --save-dev
+npm install webpack webpack-dev-server --save-dev
 npm install html-webpack-plugin html-loader --save-dev
 npm install style-loader css-loader --save-dev
 npm install ./gsap-bonus.tgz
