@@ -40,3 +40,4 @@
 ## Useful link
 - Prevent SQL injection [Codeur tuto](https://www.codeur.com/tuto/php/se-proteger-injections-sql/)
 - Base PHP and MySQL [Openclassrooms](https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql)
+- Encode and decode URL [PHP Manual](https://www.php.net/manual/fr/function.base64-encode.php)
