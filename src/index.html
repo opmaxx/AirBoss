@@ -5,109 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>AirBoss</title>
 </head>
 
-<body>
+<body class="body-index">
 
   <div class="first-move" width="100%" height="250%"></div>
 
-  <section>
-    <div class="reception" width="100%" height="100%" position="fixed">
-      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-        <mask id="m">
+  <div class="reception" width="100%" height="100%" position="fixed">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <mask id="m">
 
-          <g class="cloud1">
-            <rect fill="#fff" y="799" width="100%" height="801"/>
-            <image xlink:href="../assets/cloud1Mask.jpg" width="1200" height="800"/>
-          </g>
+        <g class="cloud1">
+          <rect fill="#fff" y="799" width="100%" height="801"/>
+          <image xlink:href="../assets/cloud1Mask.jpg" width="1200" height="800"/>
+        </g>
 
-        </mask>
+      </mask>
 
-        <!-- <image class="sky" xlink:href="../assets/sky.jpg"  width="1200" height="590" /> -->
-        <rect fill="#142249" class="sky" width="1200" height="590"/>
+      <!-- <image class="sky" xlink:href="../assets/sky.jpg"  width="1200" height="590" /> -->
+      <rect fill="#142249" class="sky" width="1200" height="590"/>
 
-        <image class="mountBg" xlink:href="../assets/mountBg.png" width="1200" height="800"/>    
-        <image class="plane" xlink:href="../assets/plane.png" width="30%" height="30%"/>
-        <image class="mountMg" xlink:href="../assets/mountMg.png" width="1200" height="800"/>    
-        <image class="cloud2" xlink:href="../assets/cloud2.png" width="1200" height="800"/>    
-        <image class="mountFg" xlink:href="../assets/mountFg.png" width="1200" height="800"/>
-        <image class="cloud1" xlink:href="../assets/cloud1.png" width="1200" height="800"/>
-        <image class="cloud3" xlink:href="../assets/cloud3.png" width="1200" height="800"/>
-        <text class="airboss" fill="#fff" x="32%" y="25%" font-size="99px">AirBoss</text>
+      <image class="mountBg" xlink:href="../assets/mountBg.png" width="1200" height="800"/>    
+      <image class="plane" xlink:href="../assets/plane.png" width="30%" height="30%"/>
+      <image class="mountMg" xlink:href="../assets/mountMg.png" width="1200" height="800"/>    
+      <image class="cloud2" xlink:href="../assets/cloud2.png" width="1200" height="800"/>    
+      <image class="mountFg" xlink:href="../assets/mountFg.png" width="1200" height="800"/>
+      <image class="cloud1" xlink:href="../assets/cloud1.png" width="1200" height="800"/>
+      <image class="cloud3" xlink:href="../assets/cloud3.png" width="1200" height="800"/>
+      <text class="airboss" fill="#fff" x="32%" y="25%" font-size="99px">AirBoss</text>
+      
+      <g id="carousel" mask="url(#m)">
+
+        <rect fill="#f1eee8" width="100%" height="100%"/>
+        <text fill="#162a43" x="10%" y="15%" font-size="32px">Votre vol vers</text>
+        <text fill="#162a43" x="10%" y="20%" font-size="32px">l'innovation</text>
+        <text fill="#162a43" x="10%" y="25%" font-size="32px">technologique</text>
         
-        <g id="carousel" mask="url(#m)">
+        <text fill="#162a43" x="10%" y="35%" font-size="18px">Avec plus de trois décennies</text>
+        <text fill="#162a43" x="10%" y="38%" font-size="18px">d'expérience notre entreprise</text>
+        <text fill="#162a43" x="10%" y="41%" font-size="18px">est un leader de l'innovation</text>
+        <text fill="#162a43" x="10%" y="44%" font-size="18px">technologique dans le domaine</text>
+        <text fill="#162a43" x="10%" y="47%" font-size="18px">aéronautique</text>
+        
+        <a href="./login.html">
+          <text class="airboss" fill="#162a43" x="10%" y="58%" font-size="18px">Se connecter</text>
+        </a>
 
-          <rect fill="#f1eee8" width="100%" height="100%"/>
-          <text fill="#162a43" x="10%" y="15%" font-size="32px">Votre vol vers</text>
-          <text fill="#162a43" x="10%" y="20%" font-size="32px">l'innovation</text>
-          <text fill="#162a43" x="10%" y="25%" font-size="32px">technologique</text>
-          
-          <text fill="#162a43" x="10%" y="35%" font-size="18px">Avec plus de trois décennies</text>
-          <text fill="#162a43" x="10%" y="38%" font-size="18px">d'expérience notre entreprise</text>
-          <text fill="#162a43" x="10%" y="41%" font-size="18px">est un leader de l'innovation</text>
-          <text fill="#162a43" x="10%" y="44%" font-size="18px">technologique dans le domaine</text>
-          <text fill="#162a43" x="10%" y="47%" font-size="18px">aéronautique</text>
-          
-          <a href="#">
-            <text class="airboss" fill="#162a43" x="10%" y="58%" font-size="18px">Se connecter</text>
-          </a>
+        <a href="./contact.html">
+          <text class="airboss" fill="#162a43" x="24%" y="58%" font-size="18px">Nous contacter</text>
+        </a>
 
-          <a href="#">
-            <text class="airboss" fill="#162a43" x="24%" y="58%" font-size="18px">Nous contacter</text>
-          </a>
+        <g>
+
+          <g class="carousel-bg">
+            <image x="82%" y="42%" height="25%" opacity="0.35" xlink:href="../assets/ia.png"></image>
+            <image x="2%" y="2%" height="25%" opacity="0.35" xlink:href="../assets/engine.png"></image>
+          </g>
 
           <g>
-
-            <g class="carousel-bg">
-              <image x="82%" y="42%" height="25%" opacity="0.35" xlink:href="../assets/ia.png"></image>
-              <image x="2%" y="2%" height="25%" opacity="0.35" xlink:href="../assets/engine.png"></image>
-            </g>
-
-            <g>
-              <image class="image-1" x="45%" y="10%" height="50%" xlink:href="../assets/helicopter.png" 
-                data-title="Expertise en Rotors d'Hélicoptère"
-                data-description-1="Avec plus de 30 ans d'expérience dans le développement de rotors"
-                data-description-2="d'hélicoptère de pointe, notre entreprise est un leader de l'industrie,"
-                data-description-3="ayant conçu plus de 500 modèles de rotors pour différents clients"></image>
-            </g>
-
-            <g>
-              <image class="image-2" x="45%" y="10%" height="50%" xlink:href="../assets/turbine.png"
-                data-title="Réacteurs d'Avion de Nouvelle Génération"
-                data-description-1="Nous avons fourni plus de 1 000 réacteurs d'avion de nouvelle"
-                data-description-2="génération à des compagnies aériennes du monde entier,"
-                data-description-3="améliorant l'efficacité énergétique de leurs flottes de 20%"
-                data-description-4="en moyenne"></image>
-            </g>
-            <g>
-              <image class="image-3" x="45%" y="10%" height="50%" xlink:href="../assets/cockpit.png"
-                data-title="Cockpits Aéronautiques Avancés"
-                data-description-1="Nos cockpits d'avion de haute technologie sont en service dans"
-                data-description-2="plus de 200 avions commerciaux et militaires, assurant un contrôle"
-                data-description-3="précis et une sécurité inégalée, ce qui a contribué à réduire de 30%" 
-                data-description-4="les incidents liés aux erreurs humaines"></image>
-            </g>
-
-            <g class="carousel-arrows">
-              <image x="41%" y="32%" opacity="0.60" xlink:href="../assets/arrow-left.png" class="arrow-left"></image>
-              <image x="92.5%" y="32%" opacity="0.60" xlink:href="../assets/arrow-right.png" class="arrow-right"></image>
-            </g>
-
-            <text id="title" fill="#fff" x="46%" y="20%" font-size="18px"></text>
-            <text id="description-1" fill="#fff" x="46%" y="40%" font-size="14px"></text>
-            <text id="description-2" fill="#fff" x="46%" y="43%" font-size="14px"></text>
-            <text id="description-3" fill="#fff" x="46%" y="46%" font-size="14px"></text>
-            <text id="description-4" fill="#fff" x="46%" y="49%" font-size="14px"></text>
-
+            <image class="image-1" x="45%" y="10%" height="50%" xlink:href="../assets/helicopter.png" 
+              data-title="Expertise en Rotors d'Hélicoptère"
+              data-description-1="Avec plus de 30 ans d'expérience dans le développement de rotors"
+              data-description-2="d'hélicoptère de pointe, notre entreprise est un leader de l'industrie,"
+              data-description-3="ayant conçu plus de 500 modèles de rotors pour différents clients"></image>
           </g>
-        </g>
-      </svg>
-    </div>
-  </section>
 
-  <script type="module" src="./script.js"></script>
+          <g>
+            <image class="image-2" x="45%" y="10%" height="50%" xlink:href="../assets/turbine.png"
+              data-title="Réacteurs d'Avion de Nouvelle Génération"
+              data-description-1="Nous avons fourni plus de 1 000 réacteurs d'avion de nouvelle"
+              data-description-2="génération à des compagnies aériennes du monde entier,"
+              data-description-3="améliorant l'efficacité énergétique de leurs flottes de 20%"
+              data-description-4="en moyenne"></image>
+          </g>
+          <g>
+            <image class="image-3" x="45%" y="10%" height="50%" xlink:href="../assets/cockpit.png"
+              data-title="Cockpits Aéronautiques Avancés"
+              data-description-1="Nos cockpits d'avion de haute technologie sont en service dans"
+              data-description-2="plus de 200 avions commerciaux et militaires, assurant un contrôle"
+              data-description-3="précis et une sécurité inégalée, ce qui a contribué à réduire de 30%" 
+              data-description-4="les incidents liés aux erreurs humaines"></image>
+          </g>
+
+          <g class="carousel-arrows">
+            <image x="41%" y="32%" opacity="0.60" xlink:href="../assets/arrow-left.png" class="arrow-left"></image>
+            <image x="92.5%" y="32%" opacity="0.60" xlink:href="../assets/arrow-right.png" class="arrow-right"></image>
+          </g>
+
+          <text id="title" fill="#fff" x="46%" y="20%" font-size="18px"></text>
+          <text id="description-1" fill="#fff" x="46%" y="40%" font-size="14px"></text>
+          <text id="description-2" fill="#fff" x="46%" y="43%" font-size="14px"></text>
+          <text id="description-3" fill="#fff" x="46%" y="46%" font-size="14px"></text>
+          <text id="description-4" fill="#fff" x="46%" y="49%" font-size="14px"></text>
+
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <script type="module" src="./index-script.js"></script>
 
 </body>
 </html>

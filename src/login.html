@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBoss - Connection</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="body-login">
+    <a href="./index.html">
+        <img src="../assets/logo.jpg" alt="Logo" class="image-container">
+    </a>
+    <div class="toggle-container">
+        <span id="log-in-label">LOG IN</span>
+        <label class="toggle-slider">
+            <input type="checkbox" id="reg-log" name="reg-log" class="toggle-switch">
+            <span class="slider"></span>
+        </label>
+        <span id="sign-up-label">SIGN UP</span>
+    </div>
+
+    <div class="login-container">
+        <div class="login-container-front">
+            <form id="login-form">
+                <label for="username">Your Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Your Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="button" class="btn">SUBMIT</button>
+                <!-- <a href="#" class="btn">SUBMIT</a> -->
+            </form>
+            
+        </div>
+        <div class="login-container-back">
+            <form id="sign-up-form">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="new-username">Your Username</label>
+                <input type="text" id="new-username" name="new-username" required>
+
+                <label for="new-password">Your Password</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <button type="submit" id="button" class="btn">SUBMIT</button>
+                <!-- <a href="#" class="btn">SUBMIT</a> -->
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="./login-script.js"></script>
+    
+</body>
+</html>
