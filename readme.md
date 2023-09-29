@@ -14,6 +14,7 @@ The use of Webpack in our front-end development environment for our IoT project 
       *all-pictures*
    ∟ src
       contact.html
+      control-panel.js
       index-script.js
       index.html
       login-script.js
@@ -47,7 +48,7 @@ npm install gsap --save
 }
 ```
 
-- Download [WAMP for Windows](https://www.wampserver.com/) and install it
+- Download [WAMP for Windows](https://www.wampserver.com/) or [LAMP for Linux](https://doc.ubuntu-fr.org/lamp) or [MAMP for Mac](https://www.mamp.info/en/mac/) and install it
 - Go in C:\wamp\bin\apache\apache2.4.9\conf\httpd.conf and change :
 ``` bash
 # Be careful dont write your path with "\" but with "/"

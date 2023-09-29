@@ -38,5 +38,9 @@ module.exports = {
       template: './src/contact.html',
       filename: 'contact.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/control-panel.html',
+      filename: 'control-panel.html',
+    }),
   ],
 };
