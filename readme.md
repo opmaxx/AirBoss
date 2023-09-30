@@ -7,18 +7,17 @@
       *all-pictures*
    ∟ src
       ∟ css
-         style-builder.css
+         style-bundle.css
+         style-page.css
       ∟ html
          contact.html
          control-panel.html
          index.html
          login.html
       ∟ js
-         bundle.js
          index-script.js
          index.bundle.js
          login-script.js
-         login.bundle.js
       ∟ php
          config.inc.php
          exemple_adding_data.php
@@ -45,8 +44,7 @@
 ```
 
 ## Useful link for PHP development
-- Prevent SQL injection [Codeur tuto](https://www.codeur.com/tuto/php/se-proteger-injections-sql/)
-- Encode and decode URL [PHP Manual](https://www.php.net/manual/fr/function.base64-encode.php)
-- Base of PHP and MySQL [Openclassrooms](https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql)
-
+- Prevent SQL injection : [Codeur tuto](https://www.codeur.com/tuto/php/se-proteger-injections-sql/)
+- Encode and decode URL : [PHP Manual](https://www.php.net/manual/fr/function.base64-encode.php)
+- Base of PHP and MySQL : [Openclassrooms](https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql)
 - You will find some examples of PHP script in AirBoss/src/php/
