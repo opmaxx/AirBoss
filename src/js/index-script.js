@@ -48,6 +48,7 @@ function init() {
         updateCarousel();
     });
     updateCarousel();
+
 }
 
 function scrollAnimation() {
