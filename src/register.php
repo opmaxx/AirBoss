@@ -21,9 +21,10 @@ if(isset($email) == true && empty($email) == false)
 }
 
 if ($email_verif == TRUE && isset($username) && isset($password)) {
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Envoie des données dans la BDD
     $stmt = $con->prepare("INSERT INTO user_data (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $password);
+    $stmt->bind_param("sss", $username, $email, $hashed_password);
 
     if ($stmt->execute()) {
         echo "<script> 
