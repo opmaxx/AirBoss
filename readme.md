@@ -21,8 +21,8 @@
       ∟ php
          config.inc.php
          exemple_adding_data.php
-         exemple_login.php
-         exemple_register.php
+         login.php
+         register.php
    readme.md
 ```
 
