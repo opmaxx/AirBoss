@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index-script.js', // Fichier JavaScript principal
-    login: './src/login-script.js',
+    index: './src/js/index-script.js', // Fichier JavaScript principal
+    login: './src/js/login-script.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -25,21 +25,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/html/index.html',
       filename: 'index.html',
       chunks: ['index'], // Inclure seulement le JavaScript principal
     }),
     new HtmlWebpackPlugin({
-      template: './src/login.html',
+      template: './src/html/login.html',
       filename: 'login.html',
       chunks: ['login'], // Inclure uniquement le JavaScript pour page1
     }),
     new HtmlWebpackPlugin({
-      template: './src/contact.html',
+      template: './src/html/contact.html',
       filename: 'contact.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/control-panel.html',
+      template: './src/html/control-panel.html',
       filename: 'control-panel.html',
     }),
   ],

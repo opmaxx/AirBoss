@@ -1,4 +1,4 @@
-import './style.css';
+import '../css/style.css';
 
 const toggleSwitch = document.getElementById("reg-log");
 const loginContainerFront = document.querySelector(".login-container-front");

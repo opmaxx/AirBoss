@@ -13,13 +13,20 @@ The use of Webpack in our front-end development environment for our IoT project 
    ∟ assets
       *all-pictures*
    ∟ src
-      contact.html
-      control-panel.js
-      index-script.js
-      index.html
-      login-script.js
-      login.html
-      style.css
+      ∟ css
+         style.css
+      ∟ html
+         contact.html
+         control-panel.js
+         index.html
+         login.html
+      ∟ js
+         index-script.js
+         login-script.js
+      ∟ php
+         config.inc.php
+         login.php
+         register.php
    .gitignore
    gsap-bonus.tgz
    readme.md
