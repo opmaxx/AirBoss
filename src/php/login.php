@@ -14,7 +14,7 @@ if (mysqli_stmt_fetch($stmt)) {
     
     if (password_verify($password, $hashed_password)) {
         echo "<script> alert('Login successful: Username - $username, Password - $password') </script>";
-        header("Location: ../html/control-panel.html");
+        header("Location: ../php/control-panel.php");
     } else {
         echo "<script>alert('Username or password is incorrect');</script>";
         header("Location: ../html/login.html");

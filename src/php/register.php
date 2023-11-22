@@ -24,12 +24,18 @@ if ($email_verif == TRUE && isset($username) && isset($password)) {
     $stmt->bind_param("sss", $username, $email, $hashed_password);
 
     if ($stmt->execute()) {
-        echo "<script> 
-            var userResponse = confirm('Successfully register');
-            if(userResponse){
-                window.location.href = '../html/login.html';
-            }
-            </script>";
+        // Insert a new row into the 'commands' table with default values
+        $insertcommandsQuery = "INSERT INTO commands (water, open, warning) VALUES (0, 0, 0)";
+        if ($con->query($insertcommandsQuery) === TRUE) {
+            echo "<script> 
+                var userResponse = confirm('Successfully registered');
+                if(userResponse){
+                    window.location.href = '../html/login.html';
+                }
+                </script>";
+        } else {
+            echo "Error inserting default values into 'commands' table: " . $con->error;
+        }
     } else {
         echo "Error: " . $stmt->error;
     }

@@ -336,7 +336,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
 
 
-/************************* For control-panel.html ************************/
+/************************* For control-panel.php ************************/
 .body-control-panel{
   margin: 0;
   padding: 0;
@@ -380,11 +380,19 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   margin: 1rem;
   border-radius: 1rem;
   background-color: #311e76;;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-.body-control-panel label:hover ion-icon{
+.body-control-panel .temperature ion-icon,
+.body-control-panel .humidity ion-icon,
+.body-control-panel .battery ion-icon {
+  transform: translate(35%, 0%);
+}
+
+.body-control-panel .warning:hover ion-icon,
+.body-control-panel .water:hover ion-icon,
+.body-control-panel .open:hover ion-icon {
   font-size: 2.5rem;
   animation: spin 0.5s linear;
 }
@@ -398,5 +406,33 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 .body-control-panel input:checked~label {
   background-color: #dc2963;
   color: #311e76;
+}
+
+.chart-container-temperature {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:40vh; 
+  width:40vw; 
+  display:none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin-top: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.chart-container-humidity {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:40vh; 
+  width:40vw; 
+  display:none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin-top: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 /*************************************************************************/
