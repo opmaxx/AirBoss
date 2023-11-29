@@ -47,7 +47,7 @@
         
         <div class="control">
         
-            <!-- Température -->
+            <!-- Temperature -->
             <div class="temperature">
                 <input type="checkbox" id="cb1" hidden>
                 <label for="cb1" id="temperature">
@@ -56,8 +56,8 @@
                 </label>
             </div>
 
+            <!-- Humidity -->
             <div class="humidity">
-                <!-- Humidité -->
                 <input type="checkbox" id="cb2" hidden>
                 <label for="cb2" id="humidity">
                     <ion-icon id="humidity" name="water-outline"></ion-icon>
@@ -65,8 +65,8 @@
                 </label>
             </div>
 
+            <!-- Battery -->
             <div class="battery">
-                <!-- Batterie -->
                 <input type="checkbox" id="cb3" hidden>
                 <label for="cb3">
                     <ion-icon id="battery" name="battery-charging-outline"></ion-icon>
@@ -74,24 +74,24 @@
                 </label>
             </div>
 
+            <!-- Warning -->
             <div class="warning">
-                <!-- warning -->
                 <input type="checkbox" id="cb4" hidden>
                 <label for="cb4">
                     <ion-icon name="warning-outline"></ion-icon>
                 </label>
             </div>
             
+            <!-- Water -->
             <div class="water">
-                <!-- Arrosage -->
                 <input type="checkbox" id="cb5" hidden>
                 <label for="cb5" id="water">
                     <ion-icon name="color-fill-outline"></ion-icon>
                 </label>
             </div>
              
+            <!-- Open -->
             <div class="open">
-                <!-- Ouverture -->
                 <input type="checkbox" id="cb6" hidden>
                 <label for="cb6" id="open">
                     <ion-icon name="push-outline"></ion-icon>
