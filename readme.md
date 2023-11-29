@@ -11,7 +11,6 @@
          style-page.css
       ∟ html
          contact.html
-         index.html
          login.html
       ∟ js
          index-script.js
@@ -28,6 +27,7 @@
          update-chart-temperature.php
          update-open.php
          update-water.php
+   index.html
    readme.md
 ```
 

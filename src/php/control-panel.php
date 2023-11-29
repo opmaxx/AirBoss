@@ -15,6 +15,29 @@
 
 <?php
     include("../php/config.inc.php");
+
+    // Démarrer la session de 10 min
+    session_start();
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        echo "<script>
+            alert('Votre session a expiré. Veuillez vous reconnecter.');
+            window.location.href = '../html/login.html';
+         </script>";
+        exit();
+    }
+
+    $inactivity_timeout = 600;
+    if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactivity_timeout)) {
+        session_unset();
+        session_destroy();
+        echo "<script>
+                alert('Votre session a expiré. Veuillez vous reconnecter');
+                window.location.href = '../html/login.html';
+             </script>";
+        exit();
+    }
+    $_SESSION['last_activity'] = time();
+
     $sql1 = "SELECT temperature, `timestamp`, humidity, battery FROM `parameters` ORDER BY `timestamp` DESC LIMIT 1";
     $res1 = mysqli_query($con, $sql1);
     

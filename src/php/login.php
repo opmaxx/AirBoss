@@ -1,4 +1,6 @@
 <?php
+// login.php
+
 require 'config.inc.php';
 
 $username = $_POST['current-username'];
@@ -13,8 +15,19 @@ mysqli_stmt_bind_result($stmt, $hashed_password);
 if (mysqli_stmt_fetch($stmt)) {
     
     if (password_verify($password, $hashed_password)) {
-        echo "<script> alert('Login successful: Username - $username, Password - $password') </script>";
+        session_start();
+
+        // Stocker des informations de l'utilisateur dans la session
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
+        $_SESSION['last_activity'] = time();
+
+        // Définir un cookie pour identifier l'utilisateur
+        $cookie_name = "user";
+        $cookie_value = $username;
+        setcookie($cookie_name, $cookie_value, time() + 600, "/"); // expire dans 10 minutes
         header("Location: ../php/control-panel.php");
+        exit();
     } else {
         echo "<script>alert('Username or password is incorrect');</script>";
         header("Location: ../html/login.html");
@@ -25,3 +38,4 @@ if (mysqli_stmt_fetch($stmt)) {
 }
 
 mysqli_stmt_close($stmt);
+?>
