@@ -15,7 +15,7 @@
 
 <?php
     include("../php/config.inc.php");
-    $sql1 = "SELECT temperature, `timestamp`, humidity, battery FROM `parameters`  ";
+    $sql1 = "SELECT temperature, `timestamp`, humidity, battery FROM `parameters` ORDER BY `timestamp` DESC LIMIT 1";
     $res1 = mysqli_query($con, $sql1);
     
     // Set default values

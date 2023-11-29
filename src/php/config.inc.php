@@ -3,7 +3,7 @@
 $db_host =  "localhost";
 $db_user = "root";
 $db_password = ""; // Be careful it can be also "admin"
-$db_name = "airboss_data";
+$db_name = "greenhouse";
     
 $con = mysqli_connect($db_host,$db_user,$db_password,$db_name);
 

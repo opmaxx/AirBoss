@@ -1,13 +1,11 @@
 <?php
 include("config.inc.php");
 
-
-
 if ($con->connect_error) {
   die('Connection failed: ' . $con->connect_error);
 }
 
-$sql = 'SELECT `timestamp`, humidity FROM parameters ORDER BY `id`DESC LIMIT 7';
+$sql = 'SELECT `timestamp`, humidity FROM parameters ORDER BY `timestamp`';
 $result = $con->query($sql);
 
 if (!$result) {

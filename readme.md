@@ -42,21 +42,21 @@ DocumentRoot "your/project/directory"
 
 - Open WAMP or LAMP or MAMP, launch phpMyAdmin and create a table with this tree :
 ``` bash
-∟ airboss_data
+∟ greenhouse
    ∟ commands
       id
-      water
       open
       warning
+      water
    ∟ parameters
+      battery
       humidity
       temperature
-      battery
       timestamp
    ∟ user_data
-      username
       email
       password
+      username
    ∟ user_request
       email
       request
