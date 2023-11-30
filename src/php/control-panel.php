@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,14 +10,15 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
 </head>
 
 <?php
     include("../php/config.inc.php");
 
-    // Démarrer la session de 10 min
+    // Start session for 10 minutes
     session_start();
+
+    // Check if user is logged in, redirect to login page if not
     if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         echo "<script>
             alert('Votre session a expiré. Veuillez vous reconnecter.');
@@ -26,7 +27,10 @@
         exit();
     }
 
+    // Check if user is logged in, redirect to login page if not
     $inactivity_timeout = 600;
+
+    // Check for inactivity and logout if exceeded
     if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactivity_timeout)) {
         session_unset();
         session_destroy();
@@ -36,8 +40,11 @@
              </script>";
         exit();
     }
+
+    // Update last activity timestamp
     $_SESSION['last_activity'] = time();
 
+    // Retrieve latest parameters from the database
     $sql1 = "SELECT temperature, `timestamp`, humidity, battery FROM `parameters` ORDER BY `timestamp` DESC LIMIT 1";
     $res1 = mysqli_query($con, $sql1);
     
@@ -46,6 +53,7 @@
     $humidity = 0;
     $battery = 0;
     
+    // Fetch data from the database result
     while ($data1 = mysqli_fetch_assoc($res1)) {
         $temperature = !empty($data1['temperature']) ? $data1['temperature'] : $temperature;
         $humidity = !empty($data1['humidity']) ? $data1['humidity'] : $humidity;
@@ -64,6 +72,7 @@
     </div>
 
     <section>
+
         <a href="./index.html">
             <img src="../../assets/logo.png" alt="Logo">
         </a>
@@ -120,8 +129,11 @@
                     <ion-icon name="push-outline"></ion-icon>
                 </label>
             </div>
+
         </div>
+
     </section>
+    
     <script src="../js/update-script.js"></script>
 
 </body>

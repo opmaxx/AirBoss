@@ -1,10 +1,8 @@
-/******************************** For All ********************************/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-/*************************************************************************/
 
 
 
-/***************************** For login.html ****************************/
+/* For login.html */
 .body-login {
   font-family: Arial, sans-serif;
   background: radial-gradient(#142249,#142249);
@@ -167,11 +165,10 @@
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
-/*************************************************************************/
 
 
 
-/**************************** For contact.html ***************************/
+/* For contact.html */
 .body-contact{
   background: radial-gradient(#142249,#142249);
   overflow: hidden;
@@ -317,7 +314,6 @@ label.fcf-label {
   padding: 0.5rem 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
-  /* font-size: 1.25rem; */
 }
 
 .fcf-btn-block {
@@ -332,11 +328,10 @@ label.fcf-label {
 input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
   width: 100%;
 }
-/*************************************************************************/
 
 
 
-/************************* For control-panel.php ************************/
+/* For control-panel.php */
 .body-control-panel{
   margin: 0;
   padding: 0;
@@ -435,4 +430,3 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   margin-top: 5px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-/*************************************************************************/

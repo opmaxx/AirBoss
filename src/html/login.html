@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,11 @@
 </head>
 
 <body class="body-login">
-    <a href="./index.html">
-        <img src="../../assets/logo.png" alt="Logo" class="image-container-login">
+
+    <a href="../../index.html">
+        <img src="../../assets/logo-slogan.png" alt="Logo" class="image-container-login">
     </a>
+
     <div class="toggle-container">
         <span id="log-in-label">LOG IN</span>
         <label class="toggle-slider">
@@ -22,6 +24,7 @@
     </div>
 
     <div class="login-container">
+
         <div class="login-container-front">
             <form id="login-form" action="../php/login.php" method="post">
                 <label for="username">Your Username</label>
@@ -31,10 +34,10 @@
                 <input type="password" id="password" name="current-password" required>
 
                 <button type="submit" id="button" class="btn">SUBMIT</button>
-                <!-- <a href="#" class="btn">SUBMIT</a> -->
             </form>
             
         </div>
+
         <div class="login-container-back">
             <form id="sign-up-form" action="../php/register.php" method="post">
                 <label for="email">Your Email</label>
@@ -47,10 +50,9 @@
                 <input type="password" id="new-password" name="new-password" required>
 
                 <button type="submit" id="button" class="btn">SUBMIT</button>
-                <!-- <a href="#" class="btn">SUBMIT</a> -->
             </form>
-            
         </div>
+        
     </div>
 
     <script src="../js/login-script.js"></script>
