@@ -348,7 +348,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 }
 .body-control-panel img{
   margin-bottom: 30px;
-  width: 70%; 
+  max-width: 325px;
 }
 
 .body-control-panel section{
@@ -367,28 +367,38 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 }
 
 .body-control-panel label{
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
   color: #fff;
   width: 5rem;
   height: 5rem;
-  margin: 1rem;
+  margin: 2rem;
   border-radius: 1rem;
   background-color: #311e76;
-  font-size: 1.4rem;
   cursor: pointer;
 }
 
 .body-control-panel .temperature ion-icon,
 .body-control-panel .humidity ion-icon,
 .body-control-panel .battery ion-icon {
-  transform: translate(35%, 0%);
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.body-control-panel .warning ion-icon,
+.body-control-panel .water ion-icon,
+.body-control-panel .open ion-icon {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .body-control-panel .warning:hover ion-icon,
 .body-control-panel .water:hover ion-icon,
 .body-control-panel .open:hover ion-icon {
-  font-size: 2.5rem;
   animation: spin 0.5s linear;
 }
 
