@@ -23,7 +23,7 @@
         echo "<script>
             alert('Votre session a expiré. Veuillez vous reconnecter.');
             window.location.href = '../html/login.html';
-         </script>";
+        </script>";
         exit();
     }
 

@@ -15,12 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
   if ($con->query($sql) === TRUE) {
       $responseMessage = "Request send successfully!";
+      header("Location: ../html/login.html");
+      exit();
   } else {
       $responseMessage = "Error: " . $sql . "<br>" . $con->error;
   }
   echo "<script>
-          alert('$responseMessage');
-        </script>";
+    alert('$responseMessage');
+  </script>";
 }
 
 $con->close();
