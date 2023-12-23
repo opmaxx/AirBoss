@@ -360,7 +360,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
 .control{
   display: grid;
-  grid-template-columns: repeat(3, 7rem);
+  grid-template-columns: repeat(3, 1fr);
   padding: 2rem;
   background-color: #f1b5c9;
   border-radius: 1rem;
@@ -372,12 +372,20 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   align-items: center;
   text-align:center;
   color: #fff;
-  width: 5rem;
   height: 5rem;
   margin: 2rem;
   border-radius: 1rem;
   background-color: #311e76;
   cursor: pointer;
+}
+
+.body-control-panel .temperature,
+.body-control-panel .humidity,
+.body-control-panel .battery,
+.body-control-panel .warning,
+.body-control-panel .water,
+.body-control-panel .open {
+  justify-content: center;
 }
 
 .body-control-panel .temperature ion-icon,
@@ -439,4 +447,10 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   border-radius: 20px;
   margin-top: 5px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width : 1224px){
+  .body-control-panel label{
+    width: 6rem;
+  }
 }

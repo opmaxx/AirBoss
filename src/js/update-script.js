@@ -76,8 +76,8 @@ function updateTemperatureChart() {
         method: 'GET',
         dataType: 'json',
         success: function (data) {
-            temperatureChart.data.labels = data.time;
-            temperatureChart.data.datasets[0].data = data.temperature;
+            temperatureChart.data.labels = data.time.reverse();
+            temperatureChart.data.datasets[0].data = data.temperature.reverse();
             temperatureChart.update();
             setTimeout(updateTemperatureChart, 5000); // Update every 5 seconds
         },
@@ -130,8 +130,8 @@ function updateHumidityChart() {
         method: 'GET',
         dataType: 'json',
         success: function (data) {
-            humidityChart.data.labels = data.time;
-            humidityChart.data.datasets[0].data = data.humidity;
+            humidityChart.data.labels = data.time.reverse();
+            humidityChart.data.datasets[0].data = data.humidity.reverse();
             humidityChart.update();
             setTimeout(updateHumidityChart, 5000); // Update every 5 seconds
         },

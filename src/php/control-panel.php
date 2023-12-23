@@ -73,8 +73,8 @@
 
     <section>
 
-        <a href="./index.html">
-            <img src="../../assets/logo.png" alt="Logo">
+        <a href="../../index.html">
+            <img src="../../assets/logo-slogan.png" alt="Logo">
         </a>
         
         <div class="control">
